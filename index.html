@@ -124,73 +124,65 @@ footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:
 @media(max-width:960px){
 
   .hero{
-    display:flex;
-    flex-direction:column;
-    min-height:auto;
+    display:block;
+    min-height:100svh;
+    position:relative;
+    background:var(--cream);
   }
+
+  .hero-l{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  min-height:100svh;
+  padding:5rem 1.5rem 3rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:linear-gradient(
+    to top,
+    rgba(10,20,35,.95) 0%,
+    rgba(10,20,35,.75) 45%,
+    rgba(10,20,35,.25) 100%
+  );
+}
 
   .hero-r{
-    position:relative;
-    height:55vh;
-    order:1;
-  }
-
-  .hero-r::after{
-    display:none;
+    position:absolute;
+    inset:0;
+    z-index:1;
+    height:auto;
   }
 
   .hero-r img{
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:center top;
+    object-position:center center;
   }
 
-  .hero-l{
-    order:2;
-    min-height:auto;
-    background:var(--cream);
-    padding:2rem 1.5rem 3rem;
-  }
-
-  .hero-l .htitle{
-    color:var(--ink);
-  }
-
-  .hero-l .htitle em{
-    color:var(--blue2);
-  }
-
-  .hero-l .hsub{
-    color:var(--ink3);
-  }
+  .hero-l .htitle{color:#F2EEE7}
+  .hero-l .htitle em{color:#8fbaff}
+  .hero-l .hsub{color:rgba(242,238,231,.78)}
+  .hero-l .ey{color:rgba(242,238,231,.55)}
+  .hero-l .el{background:rgba(242,238,231,.45)}
 
   .hero-l .btn-dk{
-    border-color:var(--ink);
-    color:var(--ink);
-  }
-
-  .hero-l .ey{
-    color:var(--ink4);
-  }
-
-  .hero-l .el{
-    background:var(--ink4);
+    border-color:rgba(242,238,231,.65);
+    color:#F2EEE7;
   }
 
   .hstats{
-    position:relative;
-    right:auto;
-    bottom:auto;
-    margin-top:2rem;
-    width:fit-content;
+    display:none;
   }
 }
 @media(max-width:600px){
-  .nlinks{display:none} .sgrid{grid-template-columns:1fr}
-  .hstats{right:1rem;bottom:1.5rem;padding:1.25rem}
+  .nlinks{display:none}
+  .sgrid{grid-template-columns:1fr}
+  .hstats{display:none}
   .thumbs.six{grid-template-columns:repeat(2,1fr)}
-}</style>
+}
+</style>
 </head>
 <body>
 <nav id="nav" class="light">
